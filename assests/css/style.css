@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #f9fafb;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    z-index: 100;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #2C6A68;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.dropdown-content a,
+.dropdown-content button {
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-align: left;
+}
+  
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+  
+/* Show dropdown when active */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+  
+/* Dropdown 2*/
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn2 {
+    background-color: transparent;
+    color: #2C6A68;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #f9fafb;
+    min-width: 170px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 100;
+}
+  
+.dropdown-content2 a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+  
+.dropdown-content2 a:hover {
+    background-color: #e0e7ff; 
+}
+  
+/* Show dropdown when active */
+.dropdown2.show .dropdown-content2 {
+    display: block;
+}
+
+.img {
+    max-width: 70%;
+}
+
+.animate {
+    animation: slide 5s ease-in-out 1s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(.3rem);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(.3rem);
+    }
+}
+
+.icon-box {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.box-transform:hover {
+    transform: translateY(-10px) !important;
+    transition: all 0.5s !important;
+    cursor: pointer !important;
+}
+
+.owl-item .item {
+    transform: scale(0.9);       
+    opacity: 0.8;                
+    transition: all 0.4s ease;  
+}
+   
+.owl-item.center .item {
+    transform: scale(1.1);       
+    opacity: 2;                  
+    z-index: 50;
+    padding-bottom: 5px;               
+}
+  
+.owl-item.center .item img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+  
+ 
+.scrollTop {
+    position: fixed;
+    right: 17px;
+    bottom: 15px;
+    background-color: #2C6A68;
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    z-index: 9999999999;
+}
+
+@media only screen and (max-width: 768px){
+    .reverse {
+        flex-direction: column-reverse !important;
+    }
+}

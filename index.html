@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flourish Prime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    
+    <!-- ======= Modal ======== -->
+    <div id="mobileMenu" class="bg-[#2C6A68] fixed top-0 left-0 h-full w-64 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <!-- Close Button -->
+        <div class="flex justify-end p-4">
+            <button onclick="toggleMenu()" class="text-2xl text-[#fff]">&times;</button>
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="flex flex-col items-start px-10 space-y-6 text-lg">
+            <li>
+                <a href="#" class="font-serif">Home</a>
+            </li>
+            <li>
+                <a href="#about" class="font-serif">Services</a>
+            </li>
+            <li>
+                <a href="#faq" class="font-serif">FAQ</a>
+            </li>
+            <li>
+                <a href="#contact" class="font-serif">Insights</a>
+            </li>
+            <li>
+                <a href="#" class="font-serif">Resources</a>
+            </li>
+        </ul>
+        <div class="block ms-8 mt-5 space-y-5">
+            <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 rounded-full shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login <span class="bi bi-arrow-down-left font-bold"></span></button>
+
+            <button class="flex items-center gap-2 bg-[#1E2429] text-white font-bold px-5 py-2 rounded-full shadow-md hover:bg-[#2B3138] transition">Sign Up <span class="bi bi-arrow-up-right-circle-fill"></span></button>
+       </div>
+    </div>
+
+    
+    <!-- ======= Navbar ======== -->
+    <section class="py-5" id="top">
+        <div class="md:px-20 lg:px-12 px-3 mt-3">
+            <nav class="flex items-center justify-between">
+                <a href="#">
+                    Flourish Prime
+                </a>
+                <ul class="hidden lg:flex items-center space-x-8 px-7 py-3">
+                    <li>
+                        <a href="#services" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">Services</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn text-[#2C6A68] font-bold text-md hover:text-[#468f96]">
+                                Events
+                                <svg viewBox="0 0 20 20" width="18" height="18">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                </svg>
+                            </button>
+                            
+                            <div class="dropdown-content">
+                                <a href="#" class="text-[#444444] text-sm">Account settings</a>
+                                <a href="#" class="text-[#444444] text-sm">Support</a>
+                                <a href="#" class="text-[#444444] text-sm">License</a>
+                                <a href="#" class="text-[#444444] text-sm">Sign out</a>
+                            </div>
+                        </div>
+                    <li>
+                        <a href="#faq" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="#insights" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">Insights</a>
+                    </li>
+                    <li>
+                        <div class="dropdown2">
+                            <button class="dropbtn2 text-[#2C6A68] font-bold text-md hover:text-[#468f96]">
+                                Resources
+                                <svg viewBox="0 0 20 20" width="18" height="18">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
+                                </svg>
+                            </button>
+                            
+                            <div class="dropdown-content2">
+                                <a href="#" class="text-[#444444] text-sm">Account settings</a>
+                                <a href="#" class="text-[#444444] text-sm">Support</a>
+                                <a href="#" class="text-[#444444] text-sm">License</a>
+                                <a href="#" class="text-[#444444] text-sm">Sign out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="items-center gap-3 justify-between hidden lg:flex">
+                    <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login</button>
+
+                    <button class="flex items-center gap-2 bg-[#1E2429] text-[#fff] bg-[#2C6A68] font-bold px-5 py-2 shadow-md hover:bg-[#2B3138] transition">Sign Up</span></button>
+                </div>
+            </nav>
+            <button class="absolute right-5 md:right-16 lg:right-5 top-7 lg:hidden text-[#2C6A68] text-2xl md:text-3xl font-bold" onclick="toggleMenu()">
+                <i class="bi bi-list text-[#2C6A68] text-3xl"></i>
+            </button>
+        </div>
+    </section>
+
+        <!-- Hero Section -->
+        <section class="container md:px-20 lg:px-28 xl:px-32 px-6 pb-10 md:pb-20">      
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                <div class="order-2 md:order-1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                    <h1 class="text-[#2C6A68] font-sans text-3xl md:text-3xl xl:text-6xl mt-5 md:mt-32 font-bold tracking-wide leading-50">
+                        Smarter Finance <br> For Every Goal
+                    </h1>
+                    <p class="text-[#1E2429] text-sm lg:text-xl font-bold font-serif my-5 leading-50">
+                        Save, invest, borrow, and grow on one trusted platform built for your success
+                    </p>
+                    <h1 class="text-[#2C6A68] text-2xl lg:text-4xl my-5 font-bold">
+                        Get The App
+                    </h1>
+                    <div class="flex justify-content-center-items-center gap-3">
+                        <a href="">
+                            <img src="img/apple_store.png" alt="apple" class="w-24 md:w-32">
+                        </a>
+                        <a href="">
+                            <img src="img/google_play.png" alt="goggle" class="w-24 md:w-32">
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center md:pt-5" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                    <img src="img/iphones.png" alt="home img" class="img animate">
+                </div>
+            </div>
+        </section> 
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-[#f9f7fa] pb-14 md:px-14 lg:px-10 xl:px-28 px-5" id="services">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <h1 class="text-[#2C6A68] font-serif text-3xl text-center pt-8 font-bold">
+                SERVICES
+            </h1>
+            <p class="text-center my-3 text-[#444444] text-sm md:text-md font-semibold leading-20">
+                Engaging panels, expert insights, and collaboration discussions <br class="hidden md:block"> shaping the future of financial technology in Nigeria
+            </p>
+        </div>
+       
+        <div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-5 pt-8">
+                <!-- Item 1 -->
+                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                    <div class="group transition-all duration-300 bg-white box-transform icon-box rounded-lg h-full px-6 py-10">
+                        <span class="bi bi-lightbulb font-bold text-3xl bg-[#F5FBF9] text-[#2C6A68] py-2 px-3 transition-colors duration-300 group-hover:bg-[#2C6A68] group-hover:text-[#fff] rounded-lg"></span>
+                      
+                        <h2 class="text-md font-bold text-[#2C6A68] font-serif mt-5">
+                            Instant Loan Application
+                        </h2>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Apply for loans in minutes with a simple, secure process and get funds quickly.
+                        </p>
+                    </div>
+                </div>
+               
+              
+                <!-- Item 2 -->
+                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <div class="group transition-all duration-300 bg-white box-transform icon-box rounded-lg h-full px-6 py-10">
+                        <span class="bi bi-bar-chart-line font-bold bg-[#F5FBF9] text-[#2C6A68] py-2 px-3 transition-colors duration-300 group-hover:bg-[#2C6A68] group-hover:text-[#fff] rounded-lg text-3xl"></span>
+                        <h2 class="text-lg font-bold text-[#2C6A68] font-serif mt-5">
+                            Automated Savings
+                        </h2>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Set up recurring savings and watch your balance grow effortlessly over time.
+                        </p>
+                    </div>    
+                </div>
+               
+                <!-- Item 3 -->
+                <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                    <div class="group transition-all duration-300 bg-white box-transform icon-box rounded-lg h-full px-6 py-10">
+                        <span class="bi bi-people font-bold bg-[#F5FBF9] text-[#2C6A68] py-2 px-3 transition-colors duration-300 group-hover:bg-[#2C6A68] group-hover:text-[#fff] rounded-lg text-3xl"></span>
+                        <h2 class="text-lg font-bold text-[#2C6A68] font-serif mt-5">
+                            Personalized Support
+                        </h2>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Get expert help and guidance for your loan and savings needs whenever you need it.
+                        </p>
+                    </div>
+                </div>
+               
+                <!-- Item 4 -->
+                <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                    <div class="group transition-all duration-300 bg-white box-transform icon-box rounded-lg h-full px-6 py-10">
+                        <span class="bi bi-graph-up-arrow font-bold bg-[#F5FBF9] text-[#2C6A68] py-2 px-3 transition-colors duration-300 group-hover:bg-[#2C6A68] group-hover:text-[#fff] rounded-lg text-3xl"></span>
+                        <h2 class="text-md font-bold text-[#2C6A68] font-serif mt-5">
+                            Financial Planning Tools
+                        </h2>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Track your loans, savings, and set financial goals with our easy-to-use dashboard.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="pb-14 md:px-20 lg:px-16 xl:px-32 px-5">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <h1 class="text-[#2C6A68] font-serif text-2xl md:text-3xl text-center pt-14 font-bold">
+                UPCOMING EVENTS
+            </h1>
+            <p class="text-center pt-3 pb-10 text-[#444444] text-sm md:text-md font-semibold leading-20">
+                Attend our events and learn more on how to improve your financial life.
+            </p>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
+            <div class="owl-carousel owl-theme mt-10">
+                <div class="shadow item">
+                    <img src="img/first-event.png" alt="img" class="h-56 w-80 md:h-56 md:w-64 lg:h-72 lg:w-80">
+                    <p class="text-center text-lg py-5 bg-[#2C6A68] text-[#dff2ea]">
+                        Financial Hub For <br> Advance Elite
+                    </p>
+                </div>
+                <div class="shadow item">
+                    <img src="img/second-event.png" alt="event" class="h-56 w-80 md:h-56 md:w-64 lg:h-72 lg:w-80">
+                    <p class="text-center text-lg py-5 bg-[#2C6A68] text-[#dff2ea] px-3">
+                        Financial Planning For <br> Young Professional
+                    </p>
+                </div>
+                <div class="shadow item">
+                    <img src="img/third-event.png" alt="event"  class="h-56 w-80 md:h-56 md:w-64 lg:h-72 lg:w-80">
+                    <p class="text-center text-lg py-5 bg-[#2C6A68] text-[#dff2ea]">
+                        Tech Event <br> For SMEs
+                    </p>
+                </div>   
+              </div>
+            <div class="text-center md:flex justify-end items-center pt-7 md:pt-5">
+                <a href="" class="bg-[#2C6A68] text-[#dff2ea] text-md lg:text-lg font-bold px-5 py-2 shadow-md hover:bg-[#1E2429] transition">
+                    See More <span class="bi bi-arrow-right-short"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- story section -->
+    <section class="bg-[#f9f7fa] py-16 md:py-20 md:px-20 lg:px-44 xl:px-80 px-5">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+                <section class="flex justify-center items-center">
+                    <div class="swiper w-[300px] h-[350px] rounded-t-3xl border-t-4 border-l-4 border-r-4 border-black bg-white overflow-hidden">
+                        <h2 class="text-[#2C6A68] font-bold text-lg text-center pt-10">Stories</h2>
+                        <div class="swiper-wrapper">
+                            <!-- Story 1 -->
+                            <div class="swiper-slide flex flex-col items-center text-center p-5">
+                                <img src="https://via.placeholder.com/60" alt="user" class="w-16 h-5 rounded-full mb-2">
+                                <h3 class="font-semibold text-[#1E2429] mb-2">Olabisi A</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Hello Piggy users, I'm Ola and more than elated to let you know that
+                                    for the first time in my existence I’m able to save over 200k because
+                                    I used the piggy safelock...
+                                </p>
+                            </div>
+                  
+                            <!-- Story 2 -->
+                            <div class="swiper-slide flex flex-col items-center text-center p-5">
+                                <img src="https://via.placeholder.com/60" alt="user" class="w-16 h-5 rounded-full mb-2">
+                                <h3 class="font-semibold text-[#1E2429] mb-2">David O</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    Piggyvest helped me save consistently and hit my target twice this
+                                    year! I’m so proud of the journey...
+                                </p>
+                            </div>
+                  
+                            <!-- Add more slides as needed -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+                <div class="py-5 md:py-20">
+                    <h2 class="text-2xl md:text-lg lg:text-2xl font-semibold text-gray-800">
+                        Join 5+ million people who save and invest with us
+                    </h2>
+                    <div class="flex items-center gap-3 pt-5">
+                        <a href="">
+                            <img src="img/apple_store.png" alt="apple store" class="w-28">
+                        </a>
+                        <a href="">
+                            <img src="img/google_play.png" alt="goggle store" class="w-28">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="pb-10 md:px-14 lg:px-16 xl:px-44 px-5" id="faq">
+        <div  data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+            <h1 class="text-[#2C6A68] font-serif text-3xl text-center pt-14 font-bold">
+                FREQUENTLY ASKED QUESTIONS
+             </h1>
+        </div>
+      
+        <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+            <div class="grid lg:grid-cols-2 gap-5 pt-0 md:pt-20"> 
+                <section class="hidden lg:block bg-[#00635E] py-7 px-9 w-96 rounded-xl w-80">
+                    <div class="space-y-5">
+                        <!-- Accordion Item 1 -->
+                        <div class="mb-3">
+                            <div class="accordion-toggle bg-transparent border border-white rounded-2xl text-white font-semibold overflow-hidden transition-all duration-500">
+                                <button class="w-full flex items-center justify-between px-5 py-3">
+                                    <span class="flex items-center gap-2">
+                                        <i class="bi bi-question-circle text-2xl text-white"></i>
+                                        General Questions
+                                    </span>
+                                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
+                                    </svg>
+                                </button>
+                        
+                                <!-- Content inside the same rounded area -->
+                                <div class="accordion-content max-h-0 overflow-hidden px-5 transition-all duration-500">
+                                    <p class="text-white text-sm pb-3 pt-1">
+                                        Here you can find answers to the most common questions about our
+                                        services, features, and how we work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Accordion Item 2 -->
+                        <div class="mb-3">
+                            <div class="accordion-toggle bg-transparent border border-white rounded-2xl text-white font-semibold overflow-hidden transition-all duration-500">
+                                <button class="w-full flex items-center justify-between px-5 py-3">
+                                    <span class="flex items-center gap-2">
+                                        <i class="bi bi-question-circle text-2xl text-white"></i>
+                                        General Questions
+                                    </span>
+                                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
+                                    </svg>
+                                </button>
+                        
+                                <!-- Content inside the same rounded area -->
+                                <div class="accordion-content max-h-0 overflow-hidden px-5 transition-all duration-500">
+                                    <p class="text-white text-sm pb-3 pt-1">
+                                        Here you can find answers to the most common questions about our
+                                        services, features, and how we work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Accordion Item 3 -->
+                        <div class="mb-3">
+                            <div class="accordion-toggle bg-transparent border border-white rounded-2xl text-white font-semibold overflow-hidden transition-all duration-500">
+                                <button class="w-full flex items-center justify-between px-5 py-3">
+                                    <span class="flex items-center gap-2">
+                                        <i class="bi bi-question-circle text-2xl text-white"></i>
+                                        General Questions
+                                    </span>
+                                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
+                                    </svg>
+                                </button>
+                        
+                                <!-- Content inside the same rounded area -->
+                                <div class="accordion-content max-h-0 overflow-hidden px-5 transition-all duration-500">
+                                    <p class="text-white text-sm pb-3 pt-1">
+                                        Here you can find answers to the most common questions about our
+                                        services, features, and how we work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                         <!-- Accordion Item 4 -->
+                         <div class="mb-3">
+                            <div class="accordion-toggle bg-transparent border border-white rounded-2xl text-white font-semibold overflow-hidden transition-all duration-500">
+                                <button class="w-full flex items-center justify-between px-5 py-3">
+                                    <span class="flex items-center gap-2">
+                                        <i class="bi bi-question-circle text-2xl text-white"></i>
+                                        General Questions
+                                    </span>
+                                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
+                                    </svg>
+                                </button>
+                        
+                                <!-- Content inside the same rounded area -->
+                                <div class="accordion-content max-h-0 overflow-hidden px-5 transition-all duration-500">
+                                    <p class="text-white text-sm pb-3 pt-1">
+                                        Here you can find answers to the most common questions about our
+                                        services, features, and how we work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                         <!-- Accordion Item 5 -->
+                         <div class="mb-3">
+                            <div class="accordion-toggle bg-transparent border border-white rounded-2xl text-white font-semibold overflow-hidden transition-all duration-500">
+                                <button class="w-full flex items-center justify-between px-5 py-3">
+                                    <span class="flex items-center gap-2">
+                                        <i class="bi bi-question-circle text-2xl text-white"></i>
+                                        General Questions
+                                    </span>
+                                    <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
+                                    </svg>
+                                </button>
+                        
+                                <!-- Content inside the same rounded area -->
+                                <div class="accordion-content max-h-0 overflow-hidden px-5 transition-all duration-500">
+                                    <p class="text-white text-sm pb-3 pt-1">
+                                        Here you can find answers to the most common questions about our
+                                        services, features, and how we work.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- More Questions button -->
+                        <div class="bg-white text-[#006D69] text-center mt-6 py-3 rounded-full font-semibold cursor-pointer hover:bg-[#e0f2f1]">
+                            More Questions? Check Our FAQs
+                        </div>
+                    </div>
+                </section>
+            
+       
+                <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+                    <div class="px-1 space-y-4 pt-10">
+                        <!-- Accordion Item 1-->
+                        <div class="border-b-2">
+                            <button onclick="toggleAccordion('acc1')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
+                                Events
+                                <span class="transition-transform bi bi-chevron-down" id="icon-acc1"></span>
+                            </button>
+                            <div id="panel-acc1" class="hidden px-2 pb-4 text-[#6c757d]">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident iusto ex, quae veritatis nam vitae tempora exercitationem perspiciatis reiciendis deserunt dolorem error vero eveniet libero esse aliquam quos labore quas?
+                            </div>
+                        </div>
+
+                        <div class="border-b-2">
+                            <!-- Accordion Item  2-->
+                            <button onclick="toggleAccordion('acc2')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
+                                Loan
+                                <span class="transition-transform bi bi-chevron-down" id="icon-acc2"></span>
+                            </button>
+                            <div id="panel-acc2" class="hidden px-2 pb-4 text-[#6c757d]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus non placeat ad, blanditiis ut praesentium, rem adipisci asperiores perferendis reprehenderit enim aut accusantium magni, est error quia dolores consectetur.
+                            </div>
+                        </div>
+                    
+                        <div class="border-b-2">
+                            <!-- Accordion Item 3-->
+                            <button onclick="toggleAccordion('acc3')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
+                                Savings
+                                <span class="transition-transform bi bi-chevron-down" id="icon-acc3"></span>
+                            </button>
+                            <div id="panel-acc3" class="hidden px-2 pb-4 text-[#6c757d]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem modi beatae iusto fuga eveniet accusantium harum possimus dolores? Quae reprehenderit accusantium doloribus quisquam! Sapiente dolorem commodi hic inventore nulla ea?
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Accordion Item 3-->
+                            <button onclick="toggleAccordion('acc4')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
+                                Financial Planing Tools
+                                <span class="transition-transform bi bi-chevron-down" id="icon-acc4"></span>
+                            </button>
+                            <div id="panel-acc4" class="hidden px-2 pb-4 text-[#6c757d]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem modi beatae iusto fuga eveniet accusantium harum possimus dolores? Quae reprehenderit accusantium doloribus quisquam! Sapiente dolorem commodi hic inventore nulla ea?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe -->
+    <section class="pb-10 md:px-14 lg:px-16 xl:px-44 px-5">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
+                <h1 class="text-[#2C6A68] font-serif text-2xl pt-14 font-bold">
+                    Stay Close, We are always Here
+                </h1>
+                <a href="" class="flex items-center gap-2 w-44 text-[#fff] bg-[#2C6A68] font-bold px-5 mt-3 py-2 shadow-md hover:bg-[#2B3138] transition">
+                    Get In Touch <span class="bi bi-arrow-right-short"></span>
+                </a>
+            </div>
+            
+            <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+                <h1 class="text-[#2C6A68] font-serif text-3xl text-center pt-14 font-bold">
+                    Subscribe to our newsletter
+                </h1>
+                <p class="text-center my-3 text-[#1E2429] text-sm md:text-md font-semibold leading-20">
+                    Subscribe to our newsletter and receive the latest news about our products and services!
+                </p>
+                <div class="flex items-center max-w-md mx-auto border border-gray-300 rounded-full overflow-hidden mt-4">
+                    <input type="email" placeholder="Enter your email" name="email" class="flex-1 px-4 py-2 text-gray-700 focus:outline-none">
+                    <button class="bg-[#2C6A68] text-white px-5 py-2 font-semibold hover:bg-[#1E4E4C] transition-colors">
+                      Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+        <section class="bg-[#f9f7fa] py-16 md:py-16 md:px-20 px-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+                <div>
+                    <h5 class="text-[#333333] font-semibold text-xl pb-3">Banking</h5>
+                    <div class="space-y-2">
+                        <p class="text-[#333333] text-sm mt-2">
+                            Personal Banking  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            SME Banking
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Digital Banking 
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Corporate Banking 
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Private Banking  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Diaspora Banking    
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Agric & Export Banking 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-[#333333] font-semibold text-xl pb-3">About Fidelity</h5>
+                    <div class="space-y-2">
+                        <p class="text-[#333333] text-sm mt-2">
+                            About Us  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            CSR  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Careers 
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            True Serve  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Investor Relations  
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-[#333333] font-semibold text-xl pb-3">Help & Support</h5>
+                    <div class="space-y-2">
+                        <p class="text-[#333333] text-sm mt-2">
+                            FAQs  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Helpdesk  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Voice of Customer 
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Whistle Blowing  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Information Security  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            AML/CFT/CFP Policy  
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-[#333333] font-semibold text-xl pb-3">Quick Links</h5>
+                    <div class="space-y-2">
+                        <p class="text-[#333333] text-sm mt-2">
+                            NIN Portal  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Online Banking 
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Loan Calculator
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Media  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Whistle Blowing  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Suspected Foreign Exchange Racketeers  
+                        </p>
+                        <p class="text-[#333333] text-sm mt-2">
+                            Reactivate Dormant Account 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-[#333333] font-semibold text-xl pb-3">Digital channels</h5>
+                    <div class="flex items-center gap-3">
+                        <a href="">
+                            <img src="img/apple_store.png" alt="apple store" class="w-20">
+                        </a>
+                        <a href="">
+                            <img src="img/google_play.png" alt="goggle store" class="w-20">
+                        </a>
+                    </div>
+                    <!-- <div class="flex items-center">
+                        <img src="img/whatapp-img.png" alt="whatsapp" class="pe-2">
+                        <img src="img/call-img.png" alt="call">
+                    </div> -->
+                    <div class="flex mt-7 items-center">
+                        <a href="" class="me-lg-3 me-2">
+                            <i class="bi bi-twitter-x border border-[#444444] p-2 rounded-full text-[#444444]"></i>
+                        </a>
+                        <a href="" class="me-lg-3 me-2">
+                            <i class="bi bi-instagram border border-[#444444] p-2 rounded-full text-[#444444]"></i>
+                        </a>
+                        <a href="" class="me-lg-3 me-2">
+                            <i class="bi bi-facebook border border-[#444444] p-2 rounded-full text-[#444444]"></i>
+                        </a>
+                        <a href="" class="me-lg-3 me-2">
+                            <i class="bi bi-linkedin border border-[#444444] p-2 rounded-full text-[#444444]"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-youtube border border-[#444444] p-2 rounded-full text-[#444444]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 pt-5 lg:pt-8">
+                <div>
+                    <p class="text-[#333333] text-sm">&copy; 2025 Fidelity Bank Plc. RC 103022. </p> 
+                    <p class="text-[#333333] text-sm">All Rights Reserved.</p>
+                </div>
+                <div>
+                    <p class="text-[#333333] text-sm">Privacy Policy | Cookie Policy | Communication Policy | Terms and Conditions | Sitemap</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- scroll-top -->
+    <div class="scrollTop flex justify-center items-center">
+        <a href="#top">
+            <i class="bi bi-arrow-up-short text-white"></i>
+        </a>
+    </div>
+
+    <script src="assests/js/script.js"></script>
+
+    <!-- ============ AOS ================= -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true,
+        disableMutationObserver: false,   
+      });
+    </script>
+
+    <!-- =============== OwlCarousel =================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 5,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            touchDrag: true,
+            mouseDrag: true,
+            center: true,
+            smartSpeed: 600,
+            dots: false,
+            nav: false,
+            responsive: {
+                0: {
+                items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+          direction: "vertical", // swipe up & down
+          loop: true,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+          speed: 800,
+        });
+    </script>
+      
+</body>
+</html>
