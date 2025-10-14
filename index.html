@@ -519,12 +519,18 @@
                         Subscribe
                     </button>
                 </div> -->
-                <div class="subscribe-container">
-                    <form class="subscribe-form">
-                      <input type="email" placeholder="Enter your email" name="email" required>
-                      <button type="submit">Subscribe</button>
-                    </form>
-                </div>  
+                <form class="flex justify-center w-full px-4">
+                    <div class="flex w-full max-w-md border border-gray-300 rounded-full overflow-hidden">
+                        <!-- allow shrinking on small screens -->
+                        <input type="email" placeholder="Email address..." aria-label="Email address" class="flex-1 min-w-0 px-4 py-2 text-gray-700 text-sm focus:outline-none" required>
+                        <!-- keep button fixed (won't force overflow) -->
+                        <button type="submit" id="button-subscribe" class="flex-none bg-[#2C6A68] text-white text-sm font-semibold px-4 sm:px-6 py-2 hover:bg-[#1E4E4C] transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+                  
+                  
             </div>
         </div>
     </section>
