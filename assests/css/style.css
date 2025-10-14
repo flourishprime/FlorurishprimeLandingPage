@@ -111,6 +111,10 @@ body {
     max-width: 70%;
 }
 
+/* .img2 {
+    max-width: 80%;
+} */
+
 .animate {
     animation: slide 5s ease-in-out 1s infinite;
 }

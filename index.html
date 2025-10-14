@@ -41,9 +41,9 @@
             </li>
         </ul>
         <div class="block ms-8 mt-5 space-y-5">
-            <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 rounded-full shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login <span class="bi bi-arrow-down-left font-bold"></span></button>
+            <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 rounded-full shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login</button>
 
-            <button class="flex items-center gap-2 bg-[#1E2429] text-white font-bold px-5 py-2 rounded-full shadow-md hover:bg-[#2B3138] transition">Sign Up <span class="bi bi-arrow-up-right-circle-fill"></span></button>
+            <button class="flex items-center gap-2 bg-[#1E2429] text-white font-bold px-5 py-2 rounded-full shadow-md hover:bg-[#2B3138] transition">Sign Up</button>
        </div>
     </div>
 
@@ -102,7 +102,7 @@
                 <div class="items-center gap-3 justify-between hidden lg:flex">
                     <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login</button>
 
-                    <button class="flex items-center gap-2 bg-[#1E2429] text-[#fff] bg-[#2C6A68] font-bold px-5 py-2 shadow-md hover:bg-[#2B3138] transition">Sign Up</span></button>
+                    <button class="flex items-center gap-2 text-[#fff] bg-[#2C6A68] font-bold px-5 py-2 shadow-md hover:bg-[#2B3138] transition">Sign Up</span></button>
                 </div>
             </nav>
             <button class="absolute right-5 md:right-16 lg:right-5 top-7 lg:hidden text-[#2C6A68] text-2xl md:text-3xl font-bold" onclick="toggleMenu()">
@@ -113,9 +113,9 @@
 
         <!-- Hero Section -->
         <section class="container md:px-20 lg:px-28 xl:px-32 px-6 pb-10 md:pb-20">      
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-7 md:gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20">
                 <div class="pt-10 md:pt-0" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
-                    <h1 class="text-[#2C6A68] font-sans text-3xl md:text-3xl xl:text-6xl mt-5 md:mt-32 font-bold tracking-wide leading-50">
+                    <h1 class="text-[#2C6A68] font-sans text-3xl md:text-3xl xl:text-6xl mt-5 md:mt-32 font-bold tracking-wider leading-50 whitespace-nowrap">
                         Smarter Finance <br> For Every Goal
                     </h1>
                     <p class="text-[#1E2429] text-sm lg:text-xl font-bold font-serif my-5 leading-50">
@@ -133,8 +133,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex justify-center items-center md:pt-5" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
-                    <img src="img/iphones.png" alt="home img" class="img animate">
+                <div class="flex justify-center items-center md:pt-5 lg:pt-20" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                    <img src="img/Mock-Up-Home.png" alt="mock-up"  class="img animate">
                 </div>
             </div>
         </section> 
@@ -439,7 +439,7 @@
             
        
                 <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
-                    <div class="px-1 space-y-4 pt-10">
+                    <div class="px-1 space-y-7 pt-10">
                         <!-- Accordion Item 1-->
                         <div class="border-b-2">
                             <button onclick="toggleAccordion('acc1')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
@@ -451,8 +451,8 @@
                             </div>
                         </div>
 
+                        <!-- Accordion Item  2-->
                         <div class="border-b-2">
-                            <!-- Accordion Item  2-->
                             <button onclick="toggleAccordion('acc2')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
                                 Loan
                                 <span class="transition-transform bi bi-chevron-down" id="icon-acc2"></span>
@@ -461,9 +461,9 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloribus non placeat ad, blanditiis ut praesentium, rem adipisci asperiores perferendis reprehenderit enim aut accusantium magni, est error quia dolores consectetur.
                             </div>
                         </div>
-                    
+                        
+                        <!-- Accordion Item 3-->
                         <div class="border-b-2">
-                            <!-- Accordion Item 3-->
                             <button onclick="toggleAccordion('acc3')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
                                 Savings
                                 <span class="transition-transform bi bi-chevron-down" id="icon-acc3"></span>
@@ -473,8 +473,8 @@
                             </div>
                         </div>
 
-                        <div>
-                            <!-- Accordion Item 3-->
+                        <!-- Accordion Item 4-->
+                        <div class="">
                             <button onclick="toggleAccordion('acc4')" class="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-[#2C6A68]">
                                 Financial Planing Tools
                                 <span class="transition-transform bi bi-chevron-down" id="icon-acc4"></span>
@@ -485,7 +485,7 @@
                         </div>
 
                         <!-- More Questions button -->
-                        <div class="block lg:hidden bg-[#2C6A68] text-[#fff] text-center mt-20 py-3 rounded-full font-semibold cursor-pointer hover:bg-[#2B3138]">
+                        <div class="block lg:hidden bg-[#2C6A68] text-[#fff] text-center py-3 rounded-full font-semibold cursor-pointer hover:bg-[#2B3138]">
                             More Questions? Check Our FAQs
                         </div>
                     </div>
@@ -496,9 +496,9 @@
 
     <!-- Subscribe -->
     <section class="pb-10 md:px-14 lg:px-16 xl:px-44 px-5">
-        <div class="grid md:grid-cols-2 gap-10">
+        <div class="grid md:grid-cols-2 gap-5 md:gap-10">
             <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="800">
-                <h1 class="text-[#2C6A68] font-serif text-2xl pt-14 font-bold">
+                <h1 class="text-[#2C6A68] font-serif text-lg md:text-2xl pt-14 font-bold">
                     Stay Close, We are always Here
                 </h1>
                 <a href="" class="flex items-center gap-2 w-44 text-[#fff] bg-[#2C6A68] font-bold px-5 mt-3 py-2 shadow-md hover:bg-[#2B3138] transition">
@@ -514,7 +514,7 @@
                     Subscribe to our newsletter and receive the latest news about our products and services!
                 </p>
                 <div class="flex justify-center items-center border border-gray-300 rounded-full overflow-hidden mt-4">
-                    <input type="email" placeholder="Enter your email" name="email" class="flex-1 px-4 py-2 text-gray-700 focus:outline-none">
+                    <input type="email" placeholder="Enter your email" name="email" class="flex-1 px-5  py-2 text-gray-700 focus:outline-none">
                     <button class="bg-[#2C6A68] text-white text-sm flex justify-center items-center px-5 py-3 font-semibold hover:bg-[#1E4E4C] transition-colors">
                         Subscribe
                     </button>
