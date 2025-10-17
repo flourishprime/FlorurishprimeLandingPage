@@ -23,23 +23,72 @@
         </div>
 
         <!-- Menu Items -->
-        <ul class="flex flex-col items-start px-10 space-y-6 text-lg">
+        <ul class="flex flex-col items-start px-7 space-y-6 text-lg">
+
+            <!-- HOME -->
             <li>
-                <a href="#" class="font-serif">Home</a>
+              <a href="#" class="font-serif text-gray-800 hover:text-[#E60000] font-semibold">Home</a>
             </li>
-            <li>
-                <a href="#about" class="font-serif">Services</a>
+
+            <!-- SERVICES -->
+            <li class="relative group w-full">
+                <div class="flex justify-between items-center w-full cursor-pointer font-serif hover:text-white focus:text-white">
+                    Services
+                    <svg class="w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.72-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.08z"/>
+                    </svg>
+                </div>
+
+                <!-- Dropdown -->
+                <div class="hidden group-hover:block mt-2">
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Loans</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Savings</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Investment</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Advisory</a>
+                </div>
             </li>
-            <li>
-                <a href="#faq" class="font-serif">FAQ</a>
+
+            <!-- RESOURCES -->
+            <li class="relative group w-full">
+                <div class="flex justify-between items-center w-full cursor-pointer font-serif hover:text-white focus:text-white">
+                    Resources
+                    <svg class="w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.72-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.08z"/>
+                    </svg>
+                </div>
+
+                <!-- Dropdown -->
+                <div class="hidden group-hover:block mt-2 rounded-md text-left transition-all duration-300">
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">About Us</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Learn & Grow</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Events</a>
+                </div>
             </li>
-            <li>
-                <a href="#contact" class="font-serif">Insights</a>
+
+            <!-- INSIGHTS -->
+            <li class="relative group w-full">
+                <div class="flex justify-between items-center w-full cursor-pointer font-serif hover:text-white focus:text-white">
+                    Insights
+                    <svg class="w-4 h-4 transform transition-transform duration-300 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.72-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.29a.75.75 0 01.02-1.08z"/>
+                    </svg>
+                </div>
+
+                <!-- Dropdown -->
+                <div class="hidden group-hover:block mt-2 rounded-md text-left transition-all duration-300">
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Blog</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Guides</a>
+                    <a href="#" class="block px-2 py-1 hover:text-white hover:border-b-2">Contact Us</a>
+                </div>
             </li>
+
+            <!-- REPORTS -->
             <li>
-                <a href="#" class="font-serif">Resources</a>
+                <a href="#" class="font-serif hover:text-white focus:text-white">Reports</a>
             </li>
         </ul>
+          
+          
         <div class="block ms-8 mt-5 space-y-5">
             <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 rounded-full shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login</button>
 
@@ -55,50 +104,69 @@
                 <a href="#">
                     Flourish Prime
                 </a>
-                <ul class="hidden lg:flex items-center space-x-8 px-7 py-3">
-                    <li>
-                        <a href="#services" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">Services</a>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn text-[#2C6A68] font-bold text-md hover:text-[#468f96]">
-                                Events
-                                <svg viewBox="0 0 20 20" width="18" height="18">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
-                                </svg>
-                            </button>
-                            
-                            <div class="dropdown-content">
-                                <a href="#" class="text-[#444444] text-sm">Account settings</a>
-                                <a href="#" class="text-[#444444] text-sm">Support</a>
-                                <a href="#" class="text-[#444444] text-sm">License</a>
-                                <a href="#" class="text-[#444444] text-sm">Sign out</a>
-                            </div>
-                        </div>
-                    <li>
-                        <a href="#faq" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="#insights" class="text-[#2C6A68] font-bold text-md hover:text-[#468f96]">Insights</a>
-                    </li>
-                    <li>
-                        <div class="dropdown2">
-                            <button class="dropbtn2 text-[#2C6A68] font-bold text-md hover:text-[#468f96]">
-                                Resources
-                                <svg viewBox="0 0 20 20" width="18" height="18">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" />
-                                </svg>
-                            </button>
-                            
-                            <div class="dropdown-content2">
-                                <a href="#" class="text-[#444444] text-sm">Account settings</a>
-                                <a href="#" class="text-[#444444] text-sm">Support</a>
-                                <a href="#" class="text-[#444444] text-sm">License</a>
-                                <a href="#" class="text-[#444444] text-sm">Sign out</a>
-                            </div>
+                <ul class="hidden lg:flex items-center space-x-10 px-7 py-3">
+
+                    <!-- SERVICES -->
+                    <li class="relative" id="servicesMenu">
+                        <button id="servicesBtn" class="flex items-center gap-1 text-[#2C6A68] font-bold text-lg hover:text-[#468f96] focus:outline-none">
+                            Services
+                            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
+                            </svg>
+                        </button>
+                  
+                        <div id="servicesDropdown" class="absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-44 z-50">
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Loan</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Savings</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Investment</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Advisory</a>
                         </div>
                     </li>
+                      
+  
+                  
+                    <!-- RESOURCES -->
+                    <li class="relative" id="resourcesMenu">
+                        <button id="resourcesBtn" class="flex items-center gap-1 text-[#2C6A68] font-bold text-lg hover:text-[#468f96] focus:outline-none">
+                            Resources
+                            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"/>
+                            </svg>
+                        </button>
+                  
+                        <div id="resourcesDropdown" class="absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-44 z-50">
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">About Us</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Learn & Grow</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Events</a>
+                        </div>
+                    </li>
+                  
+                    <!-- INSIGHTS -->
+                    <li class="relative" id="insightsMenu">
+                        <button id="insightsBtn" class="flex items-center gap-1 text-[#2C6A68] font-bold text-lg hover:text-[#468f96] focus:outline-none">
+                            Insights
+                            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                            />
+                            </svg>
+                        </button>
+                  
+                        <div id="insightsDropdown" class="absolute left-0 top-full mt-2 hidden bg-white border border-gray-200 rounded-md shadow-lg w-44 z-50">
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Blog</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Guides</a>
+                            <a href="#" class="block px-4 py-2 text-[#444444] text-sm hover:bg-gray-100">Contact Us</a>
+                        </div>
+                    </li>
+
+                    <!-- Reports -->
+                    <li>
+                        <a href="" class="text-[#2C6A68] font-bold text-lg hover:text-[#468f96] focus:outline-none">Reports</a>
+                    </li> 
                 </ul>
+
                 <div class="items-center gap-3 justify-between hidden lg:flex">
                     <button class="flex items-center gap-2 bg-white text-[#2C6A68] font-bold px-5 py-2 shadow-sm border border-[#CFE6DC] hover:bg-[#F5FBF9] transition">Login</button>
 
@@ -109,7 +177,7 @@
                 <i class="bi bi-list text-[#2C6A68] text-3xl"></i>
             </button>
         </div>
-    </section>
+  
 
         <!-- Hero Section -->
         <section class="container md:px-20 lg:px-28 xl:px-32 px-6 pb-10 md:pb-20">      
@@ -133,7 +201,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="flex justify-center items-center md:pt-5 lg:pt-20" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                <div class="flex justify-center items-center md:mt-16 xl:mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
                     <img src="img/Mock-Up-Home.png" alt="mock-up"  class="img animate">
                 </div>
             </div>

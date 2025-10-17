@@ -5,38 +5,42 @@ function toggleMenu() {
     menu.classList.toggle('-translate-x-full');
 }
 
-// Events Dropdown
-const dropdown = document.querySelector(".dropdown");
-const button = dropdown.querySelector(".dropbtn");
+// Dropdown
+function setupDropdown(menuId, btnId, dropdownId) {
+  const menu = document.getElementById(menuId);
+  const button = document.getElementById(btnId);
+  const dropdown = document.getElementById(dropdownId);
 
-// Toggle dropdown on click
-button.addEventListener("click", () => {
-  dropdown.classList.toggle("show");
-});
+  let hoverTimeout;
 
-// Close when clicking outside
-window.addEventListener("click", (e) => {
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove("show");
-  }
-});
+  // Show dropdown on hover
+  button.addEventListener("mouseenter", () => {
+    clearTimeout(hoverTimeout);
+    dropdown.classList.remove("hidden");
+  });
+
+  // Keep open when hovering dropdown
+  dropdown.addEventListener("mouseenter", () => {
+    clearTimeout(hoverTimeout);
+    dropdown.classList.remove("hidden");
+  });
+
+  // Hide when hover leaves both
+  menu.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => dropdown.classList.add("hidden"), 150);
+  });
+
+  // Close when a link is clicked
+  dropdown.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => dropdown.classList.add("hidden"));
+  });
+}
+
+setupDropdown("servicesMenu", "servicesBtn", "servicesDropdown");
+setupDropdown("resourcesMenu", "resourcesBtn", "resourcesDropdown");
+setupDropdown("insightsMenu", "insightsBtn", "insightsDropdown");
 
 
-// Resources Dropdown
-const dropdown2 = document.querySelector(".dropdown2");
-const button2 = dropdown2.querySelector(".dropbtn2");
-
-// Toggle dropdown2 on click
-button2.addEventListener("click", () => {
-  dropdown2.classList.toggle("show");
-});
-
-// Close when clicking outside
-window.addEventListener("click", (e) => {
-  if (!dropdown2.contains(e.target)) {
-    dropdown2.classList.remove("show");
-  }
-});
 
 // accordion
 function toggleAccordion(id) {
