@@ -11,34 +11,55 @@ function setupDropdown(menuId, btnId, dropdownId) {
   const button = document.getElementById(btnId);
   const dropdown = document.getElementById(dropdownId);
 
-  let hoverTimeout;
+    let hoverTimeout;
 
-  // Show dropdown on hover
-  button.addEventListener("mouseenter", () => {
-    clearTimeout(hoverTimeout);
-    dropdown.classList.remove("hidden");
-  });
+    // Toggle dropdown on click
+    button.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent click bubbling
+      const isHidden = dropdown.classList.contains("hidden");
+      document.querySelectorAll(".dropdown").forEach((d) => d.classList.add("hidden")); // close others if needed
+      if (isHidden) {
+        dropdown.classList.remove("hidden");
+      } else {
+        dropdown.classList.add("hidden");
+      }
+    });
 
-  // Keep open when hovering dropdown
-  dropdown.addEventListener("mouseenter", () => {
-    clearTimeout(hoverTimeout);
-    dropdown.classList.remove("hidden");
-  });
+    // Show dropdown on hover
+    button.addEventListener("mouseenter", () => {
+      clearTimeout(hoverTimeout);
+      dropdown.classList.remove("hidden");
+    });
 
-  // Hide when hover leaves both
-  menu.addEventListener("mouseleave", () => {
-    hoverTimeout = setTimeout(() => dropdown.classList.add("hidden"), 150);
-  });
+    // Keep open when hovering dropdown
+    dropdown.addEventListener("mouseenter", () => {
+      clearTimeout(hoverTimeout);
+      dropdown.classList.remove("hidden");
+    });
 
-  // Close when a link is clicked
-  dropdown.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => dropdown.classList.add("hidden"));
+    // Hide when hover leaves both
+    menu.addEventListener("mouseleave", () => {
+      hoverTimeout = setTimeout(() => dropdown.classList.add("hidden"), 150);
+    });
+
+    //  Close when a link is clicked
+    dropdown.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => dropdown.classList.add("hidden"));
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target)) {
+        dropdown.classList.add("hidden");
+      }
   });
 }
 
+// Initialize all dropdowns
 setupDropdown("servicesMenu", "servicesBtn", "servicesDropdown");
 setupDropdown("resourcesMenu", "resourcesBtn", "resourcesDropdown");
 setupDropdown("insightsMenu", "insightsBtn", "insightsDropdown");
+
 
 
 
